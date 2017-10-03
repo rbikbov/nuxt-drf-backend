@@ -7,7 +7,7 @@ class CustomDefaultAccountAdapter(DefaultAccountAdapter):
 
     def get_email_confirmation_url(self, request, emailconfirmation):
         url = reverse(
-            "account_confirm_email",
+            "account_confirm_email_frontend",
             args=[emailconfirmation.key])
         ret = build_absolute_uri(None, url)
         # ret = build_absolute_uri(request, url)
