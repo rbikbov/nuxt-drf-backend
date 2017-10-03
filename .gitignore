@@ -1,0 +1,8 @@
+.idea
+venv
+db.sqlite3
+commands.txt
+.env
+TODO.txt
+mychat
+backend/routing.py

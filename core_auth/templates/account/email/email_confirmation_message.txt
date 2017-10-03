@@ -1,0 +1,18 @@
+{% load account %}
+{% user_display user as user_display %}
+{% load i18n %}
+{% autoescape off %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+Добро пожаловать на {{ site_name }}!
+
+Вы получили это письмо потому, что пользователь {{ user_display }} указал его для своего аккаунта.
+Если это не Вы не переходите по ссылке.
+
+Чтобы подтвердить, что {{ user_display }} это вы, пройдите по это ссылке {{ activate_url }}
+{% endblocktrans %}
+{% endautoescape %}
+{% blocktrans with site_name=current_site.name site_domain=current_site.domain %}
+Спасибо, что используете наш сайт!
+
+Команда сайта {{ site_name }}
+{% endblocktrans %}

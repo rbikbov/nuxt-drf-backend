@@ -1,0 +1,20 @@
+SECRET_KEY=secret_key
+
+DEBUG=True
+
+DJANGO_ADMIN_URL=my_admin_panel/
+# EMAIL_URL=smtp+tls://example@gmail.com:password@smtp.gmail.com:587
+
+ALLOWED_HOSTS=*,localhost:3000
+CORS_ORIGIN_WHITELIST=localhost:3000,127.0.0.1:3000
+
+# DATABASE_URL=psql://urser:un-githubbedpassword@127.0.0.1:8458/database
+DATABASE_URL=sqlite:///db.sqlite3
+
+LANGUAGE_CODE=ru
+# LANGUAGE_CODE=en-us
+
+SITE_ID=1
+
+ACCOUNT_EMAIL_VERIFICATION=mandatory
+ACCOUNT_AUTHENTICATION_METHOD=username_email
