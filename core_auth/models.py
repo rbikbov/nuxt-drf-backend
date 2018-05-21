@@ -2,6 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from allauth.account.models import EmailAddress
 
 
 class UserManager(BaseUserManager):
@@ -33,6 +34,14 @@ class UserManager(BaseUserManager):
         user.is_superuser = True
         user.is_staff = True
         user.save(using=self._db)
+
+        new_allauth_email = EmailAddress()
+        new_allauth_email.user = user
+        new_allauth_email.email = email
+        new_allauth_email.verified = True
+        new_allauth_email.primary = True
+        new_allauth_email.save()
+
         return user
 
 
