@@ -6,16 +6,19 @@
 
 ``` bash
 # Make virtual env
-$ python3 -m venv venv
+$ python3.5 -m venv venv
 #
 # Activate virtual env
 $ source venv/bin/activate
 #
+# Upgrade pip
+$ pip install pip --upgrade
+#
 # Install dependencies
 $ pip install -r requirements.txt
 #
-# Make migrations
-$ python3 manage.py makemigrations
+# Then you need rename .env(example) to .env
+$ mv .env\(example\) .env
 #
 # Migrate
 $ python3 manage.py migrate
