@@ -105,7 +105,6 @@ venv.bak/
 
 
 .idea
-venv
 commands.txt
 TODO.txt
 mychat

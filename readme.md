@@ -17,8 +17,8 @@ $ pip install pip --upgrade
 # Install dependencies
 $ pip install -r requirements.txt
 #
-# Then you need rename .env(example) to .env
-$ mv .env\(example\) .env
+# Then you need rename or copy .env(example) file to file with name .env
+$ cp .env\(example\) .env
 #
 # Migrate
 $ python3 manage.py migrate
