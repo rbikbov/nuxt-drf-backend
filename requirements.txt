@@ -1,4 +1,4 @@
-Django==1.11.5
+Django==1.11.15
 django-allauth==0.33.0
 django-cors-headers==2.1.0
 django-environ==0.4.4
@@ -6,4 +6,3 @@ django-filter==1.0.4
 django-rest-auth==0.9.1
 djangorestframework==3.5.1
 psycopg2==2.7.3.1
-channels==1.1.8
