@@ -2,6 +2,7 @@ from rest_framework.permissions import BasePermission, SAFE_METHODS
 
 
 class IsUserOrReadOnly(BasePermission):
+
     def has_object_permission(self, request, view, user):
         if request.method in SAFE_METHODS:
             return True
@@ -9,6 +10,7 @@ class IsUserOrReadOnly(BasePermission):
 
 
 class IsOwnerOrReadOnly(BasePermission):
+
     def has_object_permission(self, request, view, obj):
         if request.method in SAFE_METHODS:
             return True
@@ -16,6 +18,7 @@ class IsOwnerOrReadOnly(BasePermission):
 
 
 class IsSuperuserOrReadOnly(BasePermission):
+
     def has_object_permission(self, request, view, obj):
         if request.method in SAFE_METHODS:
             return True

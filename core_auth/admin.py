@@ -5,4 +5,3 @@ from django.contrib.auth.admin import UserAdmin
 UserModel = get_user_model()
 
 admin.site.register(UserModel, UserAdmin)
-# admin.site.unregister(UserModel)

@@ -4,15 +4,13 @@ from rest_auth.serializers import PasswordResetSerializer
 from rest_framework import serializers
 from django.utils.translation import ugettext_lazy as _
 
-
 UserModel = get_user_model()
 
-class GroupSerializer(serializers.ModelSerializer):
 
+class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ('name',)
-        # fields = ('url', 'name')
 
 
 class UserSerializer(serializers.ModelSerializer):

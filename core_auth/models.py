@@ -6,9 +6,10 @@ from allauth.account.models import EmailAddress
 
 
 class UserManager(BaseUserManager):
+
     def create_user(self, email, password=None, **extra_fields):
         """
-        Creates and saves a User with the given email and password.
+        Creates and saves a user with the given email and password.
         """
         if not email:
             raise ValueError('Users must have an email address')
@@ -46,15 +47,11 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
-
-    email = models.EmailField(
-        _('email address'),
-        unique=True,
-    )
-    bio = models.TextField(_('о себе'), max_length=500, blank=True)
-    location = models.CharField(_('место жительства'), max_length=30, blank=True)
-    date_of_birth = models.DateField(_('дата рождения'), blank=True, null=True)
-    avatar_url = models.CharField(_('аватар'), max_length=255, blank=True)
+    email = models.EmailField(_('email address'), unique=True)
+    bio = models.TextField(_('biography'), max_length=500, blank=True)
+    location = models.CharField(_('location'), max_length=30, blank=True)
+    date_of_birth = models.DateField(_('date of birth'), blank=True, null=True)
+    avatar_url = models.CharField(_('avatar'), max_length=255, blank=True)
 
     objects = UserManager()
 

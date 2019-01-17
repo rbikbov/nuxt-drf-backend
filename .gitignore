@@ -105,7 +105,3 @@ venv.bak/
 
 
 .idea
-commands.txt
-TODO.txt
-mychat
-backend/routing.py
